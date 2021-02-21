@@ -35,7 +35,7 @@ class Login1:
         self.root.geometry("1440x900+100+50")
         self.root.resizable(False,False)
 
-        self.bg=ImageTk.PhotoImage(file="Downloads/Design.png")
+        self.bg=ImageTk.PhotoImage(file="Design.png")
         self.bg_image=Label(self.root,image=self.bg)
         self.bg_image.place(x=0,y=0,relwidth=1,relheight=1)
         today=str(time.localtime()[2])+'/'+str(time.localtime()[1])+'/'+str(time.localtime()[0])
@@ -470,7 +470,7 @@ class Login1:
         self.root4=Toplevel()
         self.root4.title("SELF MART MANAGEMENT SYSTEM")
         self.root4.geometry("1440x900+100+50")
-        self.fg=ImageTk.PhotoImage(file="Downloads/Design.png")
+        self.fg=ImageTk.PhotoImage(file="Design.png")
         self.bg_image1=Label(self.root4,image=self.fg)
         self.bg_image1.place(x=0,y=0,relwidth=1,relheight=1)
 
@@ -604,7 +604,7 @@ class Login1:
         self.root5=Toplevel()
         self.root5.title("SELF MART MANAGEMENT SYSTEM")
         self.root5.geometry("1440x900+100+50")
-        self.fg=ImageTk.PhotoImage(file="Downloads/Design.png")
+        self.fg=ImageTk.PhotoImage(file="Design.png")
         self.bg_image1=Label(self.root5,image=self.fg)
         self.bg_image1.place(x=0,y=0,relwidth=1,relheight=1)
 
