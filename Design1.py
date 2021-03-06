@@ -101,7 +101,7 @@ class Login1:
         self.root2=Toplevel()
         self.root2.title("SELF MART MANAGEMENT SYSTEM")
         self.root2.geometry("1440x900+100+50")
-        self.fg=ImageTk.PhotoImage(file="Downloads/Design.png")
+        self.fg=ImageTk.PhotoImage(file="Design.png")
         self.bg_image1=Label(self.root2,image=self.fg)
         self.bg_image1.place(x=0,y=0,relwidth=1,relheight=1)
         
@@ -1161,7 +1161,7 @@ class Login1:
         self.root7=Toplevel()
         self.root7.title("SELF MART MANAGEMENT SYSTEM")
         self.root7.geometry("1440x900+100+50")
-        self.fg12=ImageTk.PhotoImage(file="Downloads/Design.png")
+        self.fg12=ImageTk.PhotoImage(file="Design.png")
         self.bg_image1=Label(self.root7,image=self.fg12)
         self.bg_image1.place(x=0,y=0,relwidth=1,relheight=1)
         
@@ -1206,7 +1206,7 @@ class Login1:
         self.root7=Toplevel()
         self.root7.title("SELF MART MANAGEMENT SYSTEM")
         self.root7.geometry("1440x900+100+50")
-        self.fg15=ImageTk.PhotoImage(file="Downloads/Design.png")
+        self.fg15=ImageTk.PhotoImage(file="Design.png")
         self.bg_image1=Label(self.root7,image=self.fg15)
         self.bg_image1.place(x=0,y=0,relwidth=1,relheight=1)
         total=0.0
@@ -1270,7 +1270,7 @@ class Login1:
     def Valuations(self):     
         self.root8=Toplevel() 
         self.root8.geometry("1440x900+100+50")
-        self.fg15=ImageTk.PhotoImage(file="Downloads/Design.png")
+        self.fg15=ImageTk.PhotoImage(file="Design.png")
         self.bg_image1=Label(self.root8,image=self.fg15)
         self.bg_image1.place(x=0,y=0,relwidth=1,relheight=1)
         Table_Frame=Frame(self.root8,bd=4,relief=GROOVE,bg="#EC7B51")

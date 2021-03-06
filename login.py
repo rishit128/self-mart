@@ -9,7 +9,7 @@ class Login:
         self.root.geometry("1199x600+100+50")
         self.root.resizable(False,False)
 
-        self.bg=ImageTk.PhotoImage(file="Downloads/image.png")
+        self.bg=ImageTk.PhotoImage(file="image.png")
         self.bg_image=Label(self.root,image=self.bg).place(x=0,y=0,relwidth=1,relheight=1)
 
 

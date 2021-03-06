@@ -13,12 +13,12 @@ class Register:
 
         #=====Bg Images====
 
-        self.bg=ImageTk.PhotoImage(file="Downloads/Reg.png")
+        self.bg=ImageTk.PhotoImage(file="Reg.png")
         self.bg_image=Label(self.root,image=self.bg).place(x=0,y=0,relwidth=1,relheight=1)
 
         #========Left Image=======
 
-        self.left=ImageTk.PhotoImage(file="Downloads/Reg2.png")
+        self.left=ImageTk.PhotoImage(file="Reg2.png")
         self.bg_image=Label(self.root,image=self.left).place(x=80,y=100,width=400,height=500)
 
 
