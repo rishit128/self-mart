@@ -32,15 +32,15 @@ class Login1:
     def __init__(self,root):
         self.root=root
         self.root.title("SELF MART MANAGEMENT SYSTEM")
-        self.root.geometry("1440x900+100+50")
+        self.root.geometry("1366x768+100+50")
         self.root.resizable(False,False)
 
-        self.bg=ImageTk.PhotoImage(file="Design.png")
+        self.bg=ImageTk.PhotoImage(file="mesh.png")
         self.bg_image=Label(self.root,image=self.bg)
         self.bg_image.place(x=0,y=0,relwidth=1,relheight=1)
         today=str(time.localtime()[2])+'/'+str(time.localtime()[1])+'/'+str(time.localtime()[0])
-        mc=Label(self.root,text='Date :-  '+today,bg="#FABA0A",fg="indigo",font=("times new roman",18,"bold"))
-        mc.place(x=1200,y=50,width=200,height=40)
+        mc=Label(self.root,text='Date :-  '+today,bg="thistle",fg="black",font=("times new roman",18,"bold"))
+        mc.place(x=1160,y=50,width=200,height=40)
     
     
     
@@ -49,43 +49,44 @@ class Login1:
         
         ###### Frame 1 #######
 
-        Frame_login=Frame(self.root,bg="gold",bd=10,relief=GROOVE)
-        Frame_login.place(x=450,y=50,height=85,width=540)
+        Frame_login=Frame(self.root,bg="dark slate blue",bd=9,relief=GROOVE)
+        Frame_login.place(x=410,y=50,height=85,width=540)
+
 
         ###### Design ########
-        bc=Label(Frame_login,text="Self Mart Management System",font=("Impat",25,"bold"),fg="indigo",bg="gold")
-        bc.place(x=10,y=10)
+        bc=Label(Frame_login,text="Self Mart Management System",font=("Impat",25,"bold"),fg="light blue",bg="dark slate blue")
+        bc.place(x=19,y=12)
         #Label(self.root, text='*'*100,bg="white",font=("Impat",25,"bold")).place(x=45,y=140,height=25)
-        bc1=Label(self.root, text="Stock Maintenance",bd=10,relief=GROOVE,bg="#3441B7",fg="gold",font=("Impat",25,"bold"))
+        bc1=Label(self.root, text="Stock Maintenance",bd=6,relief=GROOVE,bg="dark slate gray",fg="light cyan",font=("Impat",25,"bold"))
         bc1.place(x=20,y=200,height=60,width=360)
-        bc2=Label(self.root, text="Access Database",bd=10,relief=GROOVE,bg="#3441B7",fg="gold",font=("Impat",25,"bold"))
-        bc2.place(x=400,y=200,height=60,width=360)
-        bc3=Label(self.root, text="Handle Cash Flows",bd=10,relief=GROOVE,bg="#3441B7",fg="gold",font=("Impat",25,"bold"))
-        bc3.place(x=780,y=200,height=60,width=360)
-        Rc_btn=Button(self.root,text="New V.C.",command=self.new_window,cursor="hand2",bg="#FABA0A",fg="indigo",bd=5,font=("times new roman",18,"bold"))
-        Rc_btn.place(x=0,y=280,width=380,height=40)
-        Addpc_btn=Button(self.root,text="Add product to Stock",command=self.register_window,cursor="hand2",bg="#FABA0A",fg="indigo",bd=5,font=("times new roman",18,"bold"))
-        Addpc_btn.place(x=0,y=320,width=380,height=40)
-        delpc_btn=Button(self.root,text="Delete product from Stock",command=self.delete_update,cursor="hand2",bg="#FABA0A",fg="indigo",bd=5,font=("times new roman",18,"bold"))
-        delpc_btn.place(x=0,y=360,width=380,height=40)
+        bc2=Label(self.root, text="Access Database",bd=10,relief=GROOVE,bg="dark slate gray",fg="light cyan",font=("Impat",25,"bold"))
+        bc2.place(x=450,y=200,height=60,width=360)
+        bc3=Label(self.root, text="Handle Cash Flows",bd=10,relief=GROOVE,bg="dark slate gray",fg="light cyan",font=("Impat",25,"bold"))
+        bc3.place(x=880,y=200,height=60,width=360)
+        Rc_btn=Button(self.root,text="New V.C.",command=self.new_window,cursor="hand2",bg="slate gray",fg="light cyan",bd=5,font=("times new roman",18,"bold"))
+        Rc_btn.place(x=20,y=290,width=380,height=40)
+        Addpc_btn=Button(self.root,text="Add product to Stock",command=self.register_window,cursor="hand2",bg="slate gray",fg="light cyan",bd=5,font=("times new roman",18,"bold"))
+        Addpc_btn.place(x=20,y=350,width=380,height=40)
+        delpc_btn=Button(self.root,text="Delete product from Stock",command=self.delete_update,cursor="hand2",bg="slate gray",fg="light cyan",bd=5,font=("times new roman",18,"bold"))
+        delpc_btn.place(x=20,y=410,width=380,height=40)
 
 
         ##### Design 2 ########
 
-        modify_btn=Button(self.root,text="Valuations",command=self.Valuations,cursor="hand2",bg="#FABA0A",fg="indigo",bd=5,font=("times new roman",18,"bold"))
-        modify_btn.place(x=380,y=280,width=380,height=40)
-        Search_btn=Button(self.root,text="Expiry Check",command=self.search_window,cursor="hand2",bg="#FABA0A",fg="indigo",bd=5,font=("times new roman",18,"bold"))
-        Search_btn.place(x=380,y=320,width=380,height=40)
+        modify_btn=Button(self.root,text="Valuations",command=self.Valuations,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
+        modify_btn.place(x=450,y=290,width=380,height=40)
+        Search_btn=Button(self.root,text="Expiry Check",command=self.search_window,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
+        Search_btn.place(x=450,y=410,width=380,height=40)
         
 
 
         ####### Design 3 ##########
 
-        Billing_btn=Button(self.root,text="Billing",command=self.billing,cursor="hand2",bg="#FABA0A",fg="indigo",bd=5,font=("times new roman",18,"bold"))
-        Billing_btn.place(x=760,y=280,width=380,height=40)
-        Revenue_btn=Button(self.root,text="Check Today's Revenue",command=self.show_rev,cursor="hand2",bg="#FABA0A",fg="indigo",bd=5,font=("times new roman",18,"bold"))
-        Revenue_btn.place(x=760,y=320,width=380,height=40)
-        Logout_btn=Button(self.root,text="Log Out",command=self.logout_window,cursor="hand2",bg="#FABA0A",fg="indigo",bd=5,font=("times new roman",18,"bold"))
+        Billing_btn=Button(self.root,text="Billing",command=self.billing,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
+        Billing_btn.place(x=880,y=290,width=380,height=40)
+        Revenue_btn=Button(self.root,text="Check Today's Revenue",command=self.show_rev,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
+        Revenue_btn.place(x=880,y=410,width=380,height=40)
+        Logout_btn=Button(self.root,text="Log Out",command=self.logout_window,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
         Logout_btn.place(x=1100,y=820,width=280,height=40)
 
 
