@@ -8,19 +8,19 @@ class Register:
     def __init__(self,root):
         self.root=root
         self.root.title("Registration Window")
-        self.root.geometry("1350x700+0+0")
-        self.root.config(bg="white")
+        self.root.geometry("1366x768+0+0")
+        self.root.config(bg="dark slate blue")
+        self.root.resizable(False,False)
 
         #=====Bg Images====
 
-        self.bg=ImageTk.PhotoImage(file="Reg.png")
-        self.bg_image=Label(self.root,image=self.bg).place(x=0,y=0,relwidth=1,relheight=1)
+        self.bg=ImageTk.PhotoImage(file="colorful.png")
+        self.bg_image=Label(self.root,image=self.bg).place(x=250,y=0,relwidth=1,relheight=1)
 
         #========Left Image=======
 
-        self.left=ImageTk.PhotoImage(file="Reg2.png")
+        self.left=ImageTk.PhotoImage(file="background.png")
         self.bg_image=Label(self.root,image=self.left).place(x=80,y=100,width=400,height=500)
-
 
         #========Register Frame========
 
