@@ -101,15 +101,19 @@ class Login1:
     def register_window(self):
         self.root2=Toplevel()
         self.root2.title("SELF MART MANAGEMENT SYSTEM")
-        self.root2.geometry("1440x900+100+50")
+        self.root2.geometry("1366x768+100+50")
+<<<<<<< HEAD
+        self.fg=ImageTk.PhotoImage(file="tiles.png")
+=======
         self.fg=ImageTk.PhotoImage(file="mesh.png")
+>>>>>>> 9d30d6632af1075c4abcd3e3e6b572e7b9aac4d3
         self.bg_image1=Label(self.root2,image=self.fg)
         self.bg_image1.place(x=0,y=0,relwidth=1,relheight=1)
         
         
          ###### Frame 2 #######
 
-        Frame1_login=Frame(self.root2,bg="light blue",bd=10,relief=GROOVE)
+        Frame1_login=Frame(self.root2,bg="light steel blue",bd=10,relief=GROOVE)
         Frame1_login.place(x=0,y=0,height=450,width=440)
 
         
@@ -117,56 +121,62 @@ class Login1:
          ###### Design ########
 
     
-        title=Label(Frame1_login,text="Add New Product Here",font=("Impat",18,"bold"),fg="crimson",bg="light blue",justify=CENTER)
+<<<<<<< HEAD
+        title=Label(Frame1_login,text="Add New Product Here",font=("Impat",18,"bold"),fg="midnight blue",bg="light steel blue",justify=CENTER)
         title.place(x=80,y=15)
+        self.n_label=Label(self.root2,text="ID : ",font=("Impat",16,"bold"),fg="indigo",bg="light steel blue")
+=======
+        title=Label(Frame1_login,text="Add New Product Here",font=("Impat",18,"bold"),fg="crimson",bg="light blue",justify=CENTER)
+        title.place(x=10,y=10)
         self.n_label=Label(self.root2,text="ID : ",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+>>>>>>> 9d30d6632af1075c4abcd3e3e6b572e7b9aac4d3
         self.n_label.place(x=15,y=82)
         self.n_var=StringVar()
-        self.n_var.set(str(random.randint(100,999)))
+        self.n_var.set(str(random.randint(1,199)))
         n=Entry(self.root2,textvariable=self.n_var,font=("Times new roman",15),bg="white")
         n.place(x=173,y=88,width=250)
         
-        type_label=Label(self.root2,text="Name :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        type_label=Label(self.root2,text="Name :",font=("Impat",16,"bold"),fg="indigo",bg="light steel blue")
         type_label.place(x=15,y=135)
         self.type_label_var=StringVar()
         type_label=Entry(self.root2,textvariable=self.type_label_var,font=("Times new roman",15),bg="white")
         type_label.place(x=173,y=141,width=250)
 
-        QuantityLeft_label=Label(self.root2,text="Type :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        QuantityLeft_label=Label(self.root2,text="Type :",font=("Impat",16,"bold"),fg="indigo",bg="light steel blue")
         QuantityLeft_label.place(x=15,y=188)
         self.Quantity_label_var=StringVar()
         Quantity_label=Entry(self.root2,textvariable=self.Quantity_label_var,font=("Times new roman",15),bg="white")
         Quantity_label.place(x=173,y=194,width=250)
 
-        COST_label=Label(self.root2,text="QuantityLeft  :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        COST_label=Label(self.root2,text="QuantityLeft  :",font=("Impat",16,"bold"),fg="indigo",bg="light steel blue")
         COST_label.place(x=15,y=243)
         self.cost_label_var=StringVar()
         self.cost_label=Entry(self.root2,textvariable=self.cost_label_var,font=("Times new roman",15),bg="white")
         self.cost_label.place(x=173,y=248,width=250)
 
-        purposr_label=Label(self.root2,text="Cost  :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        purposr_label=Label(self.root2,text="Cost  :",font=("Impat",16,"bold"),fg="indigo",bg="light steel blue")
         purposr_label.place(x=15,y=296)
         self.purpose_label_var=StringVar()
         self.purpose_label=Entry(self.root2,textvariable=self.purpose_label_var,font=("Times new roman",15),bg="white")
         self.purpose_label.place(x=173,y=302,width=250)
 
 
-        ExpiryDate_label=Label(self.root2,text="Expiry Date :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        ExpiryDate_label=Label(self.root2,text="Expiry Date :",font=("Impat",16,"bold"),fg="indigo",bg="light steel blue")
         ExpiryDate_label.place(x=15,y=349)
         self.expiry_label_var=StringVar()
         self.expiry_label=Entry(self.root2,textvariable=self.expiry_label_var,font=("Times new roman",15),bg="white")
         self.expiry_label.place(x=173,y=355,width=250)
 
-        Manufacture_label=Label(self.root2,text="Manufacture :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        Manufacture_label=Label(self.root2,text="Manufacture :",font=("Impat",16,"bold"),fg="indigo",bg="light steel blue")
         Manufacture_label.place(x=15,y=402)
         self.manu_label_var=StringVar()
         self.manu_label=Entry(self.root2,textvariable=self.manu_label_var,font=("Times new roman",15),bg="white")
         self.manu_label.place(x=173,y=407,width=250)
-        submit1=Button(self.root2,text="Submit",command=self.submit,cursor="hand2",bg="#FF8C00",font=("times New roman",16))
+        submit1=Button(self.root2,text="Submit",command=self.submit,cursor="hand2",bg="dark khaki",fg="dark blue",font=("times New roman",16,"bold"))
         submit1.place(x=30,y=500,width=130)
-        clear=Button(self.root2,text="Clear",command=self.clear,cursor="hand2",bg="#FF8C00",font=("times New roman",16))
+        clear=Button(self.root2,text="Clear",command=self.clear,cursor="hand2",bg="dark khaki",fg="dark blue",font=("times New roman",16,"bold"))
         clear.place(x=180,y=500,width=130)
-        r=Frame(self.root2,bd=7,relief=GROOVE,bg="slate gray")
+        r=Frame(self.root2,bd=7,relief=GROOVE,bg="light steel blue")
         r.place(x=550,y=500,width=250,height=70)
         
         
@@ -176,7 +186,7 @@ class Login1:
         rows1=cur.fetchall()
         
         rishit=len(rows1)
-        undata=Label(self.root2,text="Total Products = "+str(rishit),bg="slate gray",fg="indigo",font=("times new roman",18,"bold"))
+        undata=Label(self.root2,text="Total Products = "+str(rishit),bg="light steel blue",fg="midnight blue",font=("times new roman",18,"bold"))
         undata.place(x=570,y=520)
        
 
@@ -290,62 +300,65 @@ class Login1:
     def new_window(self):
         self.root3=Toplevel()
         self.root3.title("SELF MART MANAGEMENT SYSTEM")
-        self.root3.geometry("1440x900+100+50")
-        self.root3.config(bg='#A569BD')
-        title=Label(self.root3,text="Customer Details",font=("Impat",35,"bold"),fg="indigo",bg="gold")
+        self.root3.geometry("1366x768+100+50")
+        self.root3.resizable(False,False)
+        self.fg=ImageTk.PhotoImage(file="ali.png")
+        self.bg_image1=Label(self.root3,image=self.fg)
+        self.bg_image1.place(x=0,y=0,relwidth=1,relheight=1)
+        title=Label(self.root3,text="Customer Details",font=("Impat",35,"bold"),fg="indigo",bg="dark khaki")
         title.place(x=550,y=20)
 
 
-        Frame1_login=Frame(self.root3,bg="light blue",bd=10,relief=GROOVE)
+        Frame1_login=Frame(self.root3,bg="light gray",bd=10,relief=GROOVE)
         Frame1_login.place(x=0,y=40,height=500,width=440)
 
-        title=Label(Frame1_login,text="Add Details",font=("Impat",18,"bold"),fg="crimson",bg="light blue",justify=CENTER)
+        title=Label(Frame1_login,text="Add Details",font=("Impat",18,"bold"),fg="crimson",bg="light gray",justify=CENTER)
         title.place(x=130,y=15)
 
-        self.id_label=Label(self.root3,text="id : ",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        self.id_label=Label(self.root3,text="id : ",font=("Impat",16,"bold"),fg="indigo",bg="light gray")
         self.id_label.place(x=15,y=140)
         self.id_var=StringVar()
         id=Entry(self.root3,textvariable=self.id_var,font=("Times new roman",15),bg="white")
         id.place(x=173,y=140,width=250)
 
-        f_name_label=Label(self.root3,text="f_name :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        f_name_label=Label(self.root3,text="f_name :",font=("Impat",16,"bold"),fg="indigo",bg="light gray")
         f_name_label.place(x=15,y=190)
         self.f_name_label_var=StringVar()
         f_name_label=Entry(self.root3,textvariable=self.f_name_label_var,font=("Times new roman",15),bg="white")
         f_name_label.place(x=173,y=190,width=250)
 
-        l_name_label=Label(self.root3,text="l_name :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        l_name_label=Label(self.root3,text="l_name :",font=("Impat",16,"bold"),fg="indigo",bg="light gray")
         l_name_label.place(x=15,y=240)
         self.i_name_label_var=StringVar()
         i_name_label=Entry(self.root3,textvariable=self.i_name_label_var,font=("Times new roman",15),bg="white")
         i_name_label.place(x=173,y=240,width=250)
 
-        contact_label=Label(self.root3,text="Contact  :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        contact_label=Label(self.root3,text="Contact  :",font=("Impat",16,"bold"),fg="indigo",bg="light gray")
         contact_label.place(x=15,y=290)
         self.contact_label_var=StringVar()
         self.contact_label=Entry(self.root3,textvariable=self.contact_label_var,font=("Times new roman",15),bg="white")
         self.contact_label.place(x=173,y=290,width=250)
 
-        email_label=Label(self.root3,text="email  :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        email_label=Label(self.root3,text="email  :",font=("Impat",16,"bold"),fg="indigo",bg="light gray")
         email_label.place(x=15,y=340)
         self.email_label_var=StringVar()
         self.email_label=Entry(self.root3,textvariable=self.email_label_var,font=("Times new roman",15),bg="white")
         self.email_label.place(x=173,y=340,width=250)
 
 
-        question_label=Label(self.root3,text="question :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        question_label=Label(self.root3,text="question :",font=("Impat",16,"bold"),fg="indigo",bg="light gray")
         question_label.place(x=15,y=390)
         self.question_label_var=StringVar()
         self.question_label=Entry(self.root3,textvariable=self.question_label_var,font=("Times new roman",15),bg="white")
         self.question_label.place(x=173,y=390,width=250)
 
-        answer_label=Label(self.root3,text="answer :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        answer_label=Label(self.root3,text="answer :",font=("Impat",16,"bold"),fg="indigo",bg="light gray")
         answer_label.place(x=15,y=440)
         self.answer_label_var=StringVar()
         self.answer_label=Entry(self.root3,textvariable=self.answer_label_var,font=("Times new roman",15),bg="white")
         self.answer_label.place(x=173,y=440,width=250)
 
-        password_label=Label(self.root3,text="password :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        password_label=Label(self.root3,text="password :",font=("Impat",16,"bold"),fg="indigo",bg="light gray")
         password_label.place(x=15,y=490)
         self.password_label_var=StringVar()
         self.password_label=Entry(self.root3,textvariable=self.password_label_var,font=("Times new roman",15),bg="white")
@@ -358,18 +371,18 @@ class Login1:
         search=Button(self.root3,text="Search",command=self.search_data1,cursor="hand2",bg="#FF8C00",font=("times New roman",16))
         search.place(x=380,y=600,width=130)
         r=Frame(self.root3,bd=7,relief=GROOVE,bg="dark khaki")
-        r.place(x=10,y=650,width=600,height=70)
+        r.place(x=600,y=600,width=600,height=70)
         lblsearch=Label(self.root3,text="Search By",font=("Impat",16,"bold"),fg="dark blue",bg="dark khaki")
-        lblsearch.place(x=20,y=670)
+        lblsearch.place(x=610,y=620)
 
         self.cmb_search=ttk.Combobox(self.root3,font=("Times new roman",16),state='readonly',justify=CENTER)
         self.cmb_search['values']=("Select","f_name","contact")
-        self.cmb_search.place(x=140,y=670,width=130,height=30)
+        self.cmb_search.place(x=750,y=620,width=130,height=30)
         self.cmb_search.current(0)
 
         self.txt_search_var=StringVar()
         self.txt_search=Entry(self.root3,textvariable=self.txt_search_var,font=("Times new roman",15),bg="white",bd=5,relief=GROOVE)
-        self.txt_search.place(x=291,y=670,width=250,height=30)
+        self.txt_search.place(x=900,y=620,width=250,height=30)
 
 
 
@@ -470,71 +483,71 @@ class Login1:
     def delete_update(self):
         self.root4=Toplevel()
         self.root4.title("SELF MART MANAGEMENT SYSTEM")
-        self.root4.geometry("1440x900+100+50")
-        self.fg=ImageTk.PhotoImage(file="Design.png")
+        self.root4.geometry("1366x768+100+50")
+        self.fg=ImageTk.PhotoImage(file="roman.png")
         self.bg_image1=Label(self.root4,image=self.fg)
         self.bg_image1.place(x=0,y=0,relwidth=1,relheight=1)
 
         ######## ############ ############# ########
-        Frame1_login=Frame(self.root4,bg="light blue",bd=10,relief=GROOVE)
+        Frame1_login=Frame(self.root4,bg="slate gray",bd=10,relief=GROOVE)
         Frame1_login.place(x=0,y=0,height=450,width=440)
 
 
-        title=Label(Frame1_login,text="Add New Product Here",font=("Impat",18,"bold"),fg="crimson",bg="light blue",justify=CENTER)
+        title=Label(Frame1_login,text="Add New Product Here",font=("Impat",18,"bold"),fg="maroon",bg="slate gray",justify=CENTER)
         title.place(x=80,y=15)
-        self.n_label=Label(self.root4,text="ID : ",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        self.n_label=Label(self.root4,text="ID : ",font=("Impat",16,"bold"),fg="indigo",bg="slate gray")
         self.n_label.place(x=15,y=82)
         self.n_var=StringVar()
         n=Entry(self.root4,textvariable=self.n_var,font=("Times new roman",15),bg="white")
         n.place(x=173,y=88,width=250)
 
-        type_label=Label(self.root4,text="Name :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        type_label=Label(self.root4,text="Name :",font=("Impat",16,"bold"),fg="indigo",bg="slate gray")
         type_label.place(x=15,y=135)
         self.type_label_var=StringVar()
         type_label=Entry(self.root4,textvariable=self.type_label_var,font=("Times new roman",15),bg="white")
         type_label.place(x=173,y=141,width=250)
 
-        QuantityLeft_label=Label(self.root4,text="Type :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        QuantityLeft_label=Label(self.root4,text="Type :",font=("Impat",16,"bold"),fg="indigo",bg="slate gray")
         QuantityLeft_label.place(x=15,y=188)
         self.Quantity_label_var=StringVar()
         Quantity_label=Entry(self.root4,textvariable=self.Quantity_label_var,font=("Times new roman",15),bg="white")
         Quantity_label.place(x=173,y=194,width=250)
 
 
-        COST_label=Label(self.root4,text="QuantityLeft  :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        COST_label=Label(self.root4,text="QuantityLeft  :",font=("Impat",16,"bold"),fg="indigo",bg="slate gray")
         COST_label.place(x=15,y=243)
         self.cost_label_var=StringVar()
         self.cost_label=Entry(self.root4,textvariable=self.cost_label_var,font=("Times new roman",15),bg="white")
         self.cost_label.place(x=173,y=248,width=250)
 
-        purposr_label=Label(self.root4,text="Cost  :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        purposr_label=Label(self.root4,text="Cost  :",font=("Impat",16,"bold"),fg="indigo",bg="slate gray")
         purposr_label.place(x=15,y=296)
         self.purpose_label_var=StringVar()
         self.purpose_label=Entry(self.root4,textvariable=self.purpose_label_var,font=("Times new roman",15),bg="white")
         self.purpose_label.place(x=173,y=302,width=250)
 
 
-        ExpiryDate_label=Label(self.root4,text="Expiry Date :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        ExpiryDate_label=Label(self.root4,text="Expiry Date :",font=("Impat",16,"bold"),fg="indigo",bg="slate gray")
         ExpiryDate_label.place(x=15,y=349)
         self.expiry_label_var=StringVar()
         self.expiry_label=Entry(self.root4,textvariable=self.expiry_label_var,font=("Times new roman",15),bg="white")
         self.expiry_label.place(x=173,y=355,width=250)
 
 
-        Manufacture_label=Label(self.root4,text="Manufacture :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        Manufacture_label=Label(self.root4,text="Manufacture :",font=("Impat",16,"bold"),fg="indigo",bg="slate gray")
         Manufacture_label.place(x=15,y=402)
         self.manu_label_var=StringVar()
         self.manu_label=Entry(self.root4,textvariable=self.manu_label_var,font=("Times new roman",15),bg="white")
         self.manu_label.place(x=173,y=407,width=250)
-        submit1=Button(self.root4,text="Submit",command=self.submit,cursor="hand2",bg="#FF8C00",font=("times New roman",16))
+        submit1=Button(self.root4,text="Submit",command=self.submit,cursor="hand2",bg="cadet blue",font=("times New roman",16))
         submit1.place(x=30,y=500,width=130)
-        clear=Button(self.root4,text="Clear",command=self.clear,cursor="hand2",bg="#FF8C00",font=("times New roman",16))
+        clear=Button(self.root4,text="Clear",command=self.clear,cursor="hand2",bg="cadet blue",font=("times New roman",16))
         clear.place(x=180,y=500,width=130)
-        delete=Button(self.root4,text="Delete",command=self.delete_data,cursor="hand2",bg="#FF8C00",font=("times New roman",16))
+        delete=Button(self.root4,text="Delete",command=self.delete_data,cursor="hand2",bg="cadet blue",font=("times New roman",16))
         delete.place(x=320,y=500,width=130)
-        update=Button(self.root4,text="update",command=self.update_ddat,cursor="hand2",bg="#FF8C00",font=("times New roman",16))
+        update=Button(self.root4,text="update",command=self.update_ddat,cursor="hand2",bg="cadet blue",font=("times New roman",16))
         update.place(x=480,y=500,width=130)
-        search=Button(self.root4,text="Search",command=self.search_data,cursor="hand2",bg="#FF8C00",font=("times New roman",16))
+        search=Button(self.root4,text="Search",command=self.search_data,cursor="hand2",bg="cadet blue",font=("times New roman",16))
         search.place(x=640,y=500,width=130)
         r=Frame(self.root4,bd=7,relief=GROOVE,bg="slate gray")
         r.place(x=10,y=580,width=600,height=70)
