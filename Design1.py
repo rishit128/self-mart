@@ -102,7 +102,7 @@ class Login1:
         self.root2=Toplevel()
         self.root2.title("SELF MART MANAGEMENT SYSTEM")
         self.root2.geometry("1440x900+100+50")
-        self.fg=ImageTk.PhotoImage(file="Design.png")
+        self.fg=ImageTk.PhotoImage(file="mesh.png")
         self.bg_image1=Label(self.root2,image=self.fg)
         self.bg_image1.place(x=0,y=0,relwidth=1,relheight=1)
         
