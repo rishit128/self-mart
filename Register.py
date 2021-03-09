@@ -27,7 +27,7 @@ class Register:
         frame1=Frame(self.root,bg="white")
         frame1.place(x=480,y=100,width=700,height=500)
 
-        title=Label(frame1,text="Register Here",font=("Times new roman",20,"bold"),bg="white",fg="green").place(x=50,y=30)
+        title=Label(frame1,text="Register Here",font=("Times new roman",20,"bold"),bg="white",fg="dark blue").place(x=50,y=30)
         
          #----------------------row 1
 
