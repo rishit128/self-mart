@@ -63,11 +63,11 @@ class Login1:
         bc2.place(x=450,y=200,height=60,width=360)
         bc3=Label(self.root, text="Handle Cash Flows",bd=10,relief=GROOVE,bg="dark slate gray",fg="light cyan",font=("Impat",25,"bold"))
         bc3.place(x=880,y=200,height=60,width=360)
-        Rc_btn=Button(self.root,text="New V.C.",command=self.new_window,cursor="hand2",bg="slate gray",fg="light cyan",bd=5,font=("times new roman",18,"bold"))
+        Rc_btn=Button(self.root,text="New V.C.",command=self.new_window,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
         Rc_btn.place(x=20,y=290,width=380,height=40)
-        Addpc_btn=Button(self.root,text="Add product to Stock",command=self.register_window,cursor="hand2",bg="slate gray",fg="light cyan",bd=5,font=("times new roman",18,"bold"))
+        Addpc_btn=Button(self.root,text="Add product to Stock",command=self.register_window,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
         Addpc_btn.place(x=20,y=350,width=380,height=40)
-        delpc_btn=Button(self.root,text="Delete product from Stock",command=self.delete_update,cursor="hand2",bg="slate gray",fg="light cyan",bd=5,font=("times new roman",18,"bold"))
+        delpc_btn=Button(self.root,text="Delete product from Stock",command=self.delete_update,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
         delpc_btn.place(x=20,y=410,width=380,height=40)
 
 
@@ -76,7 +76,7 @@ class Login1:
         modify_btn=Button(self.root,text="Valuations",command=self.Valuations,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
         modify_btn.place(x=450,y=290,width=380,height=40)
         Search_btn=Button(self.root,text="Expiry Check",command=self.search_window,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
-        Search_btn.place(x=450,y=410,width=380,height=40)
+        Search_btn.place(x=450,y=350,width=380,height=40)
         
 
 
@@ -85,7 +85,7 @@ class Login1:
         Billing_btn=Button(self.root,text="Billing",command=self.billing,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
         Billing_btn.place(x=880,y=290,width=380,height=40)
         Revenue_btn=Button(self.root,text="Check Today's Revenue",command=self.show_rev,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
-        Revenue_btn.place(x=880,y=410,width=380,height=40)
+        Revenue_btn.place(x=880,y=350,width=380,height=40)
         Logout_btn=Button(self.root,text="Log Out",command=self.logout_window,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
         Logout_btn.place(x=1100,y=820,width=280,height=40)
 
@@ -109,7 +109,7 @@ class Login1:
         
          ###### Frame 2 #######
 
-        Frame1_login=Frame(self.root2,bg="light blue",bd=10,relief=GROOVE)
+        Frame1_login=Frame(self.root2,bg="light steel blue",bd=10,relief=GROOVE)
         Frame1_login.place(x=0,y=0,height=450,width=440)
 
         
@@ -117,56 +117,56 @@ class Login1:
          ###### Design ########
 
     
-        title=Label(Frame1_login,text="Add New Product Here",font=("Impat",18,"bold"),fg="crimson",bg="light blue",justify=CENTER)
+        title=Label(Frame1_login,text="Add New Product Here",font=("Impat",18,"bold"),fg="midnight blue",bg="light steel blue",justify=CENTER)
         title.place(x=10,y=10)
-        self.n_label=Label(self.root2,text="ID : ",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        self.n_label=Label(self.root2,text="ID : ",font=("Impat",16,"bold"),fg="indigo",bg="light steel blue")
         self.n_label.place(x=15,y=82)
         self.n_var=StringVar()
         self.n_var.set(str(random.randint(1,199)))
         n=Entry(self.root2,textvariable=self.n_var,font=("Times new roman",15),bg="white")
         n.place(x=173,y=88,width=250)
         
-        type_label=Label(self.root2,text="Name :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        type_label=Label(self.root2,text="Name :",font=("Impat",16,"bold"),fg="indigo",bg="light steel blue")
         type_label.place(x=15,y=135)
         self.type_label_var=StringVar()
         type_label=Entry(self.root2,textvariable=self.type_label_var,font=("Times new roman",15),bg="white")
         type_label.place(x=173,y=141,width=250)
 
-        QuantityLeft_label=Label(self.root2,text="Type :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        QuantityLeft_label=Label(self.root2,text="Type :",font=("Impat",16,"bold"),fg="indigo",bg="light steel blue")
         QuantityLeft_label.place(x=15,y=188)
         self.Quantity_label_var=StringVar()
         Quantity_label=Entry(self.root2,textvariable=self.Quantity_label_var,font=("Times new roman",15),bg="white")
         Quantity_label.place(x=173,y=194,width=250)
 
-        COST_label=Label(self.root2,text="QuantityLeft  :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        COST_label=Label(self.root2,text="QuantityLeft  :",font=("Impat",16,"bold"),fg="indigo",bg="light steel blue")
         COST_label.place(x=15,y=243)
         self.cost_label_var=StringVar()
         self.cost_label=Entry(self.root2,textvariable=self.cost_label_var,font=("Times new roman",15),bg="white")
         self.cost_label.place(x=173,y=248,width=250)
 
-        purposr_label=Label(self.root2,text="Cost  :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        purposr_label=Label(self.root2,text="Cost  :",font=("Impat",16,"bold"),fg="indigo",bg="light steel blue")
         purposr_label.place(x=15,y=296)
         self.purpose_label_var=StringVar()
         self.purpose_label=Entry(self.root2,textvariable=self.purpose_label_var,font=("Times new roman",15),bg="white")
         self.purpose_label.place(x=173,y=302,width=250)
 
 
-        ExpiryDate_label=Label(self.root2,text="Expiry Date :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        ExpiryDate_label=Label(self.root2,text="Expiry Date :",font=("Impat",16,"bold"),fg="indigo",bg="light steel blue")
         ExpiryDate_label.place(x=15,y=349)
         self.expiry_label_var=StringVar()
         self.expiry_label=Entry(self.root2,textvariable=self.expiry_label_var,font=("Times new roman",15),bg="white")
         self.expiry_label.place(x=173,y=355,width=250)
 
-        Manufacture_label=Label(self.root2,text="Manufacture :",font=("Impat",16,"bold"),fg="indigo",bg="light blue")
+        Manufacture_label=Label(self.root2,text="Manufacture :",font=("Impat",16,"bold"),fg="indigo",bg="light steel blue")
         Manufacture_label.place(x=15,y=402)
         self.manu_label_var=StringVar()
         self.manu_label=Entry(self.root2,textvariable=self.manu_label_var,font=("Times new roman",15),bg="white")
         self.manu_label.place(x=173,y=407,width=250)
-        submit1=Button(self.root2,text="Submit",command=self.submit,cursor="hand2",bg="#FF8C00",font=("times New roman",16))
+        submit1=Button(self.root2,text="Submit",command=self.submit,cursor="hand2",bg="light steel blue",fg="midnight blue",font=("times New roman",16,"bold"))
         submit1.place(x=30,y=500,width=130)
-        clear=Button(self.root2,text="Clear",command=self.clear,cursor="hand2",bg="#FF8C00",font=("times New roman",16))
+        clear=Button(self.root2,text="Clear",command=self.clear,cursor="hand2",bg="light steel blue",fg="midnight blue",font=("times New roman",16,"bold"))
         clear.place(x=180,y=500,width=130)
-        r=Frame(self.root2,bd=7,relief=GROOVE,bg="slate gray")
+        r=Frame(self.root2,bd=7,relief=GROOVE,bg="light steel blue")
         r.place(x=550,y=500,width=250,height=70)
         
         
@@ -176,7 +176,7 @@ class Login1:
         rows1=cur.fetchall()
         
         rishit=len(rows1)
-        undata=Label(self.root2,text="Total Products = "+str(rishit),bg="slate gray",fg="indigo",font=("times new roman",18,"bold"))
+        undata=Label(self.root2,text="Total Products = "+str(rishit),bg="light steel blue",fg="indigo",font=("times new roman",18,"bold"))
         undata.place(x=570,y=520)
        
 
@@ -295,7 +295,7 @@ class Login1:
         self.fg=ImageTk.PhotoImage(file="ali.png")
         self.bg_image1=Label(self.root3,image=self.fg)
         self.bg_image1.place(x=0,y=0,relwidth=1,relheight=1)
-        title=Label(self.root3,text="Customer Details",font=("Impat",35,"bold"),fg="indigo",bg="dark khaki")
+        title=Label(self.root3,text="Customer Details",font=("Impat",35,"bold"),fg="midnight blue",bg="dark khaki")
         title.place(x=550,y=20)
 
 
@@ -354,11 +354,11 @@ class Login1:
         self.password_label=Entry(self.root3,textvariable=self.password_label_var,font=("Times new roman",15),bg="white")
         self.password_label.place(x=173,y=490,width=250)
 
-        delete=Button(self.root3,text="Delete",command=self.delete_data1,cursor="hand2",bg="#FF8C00",font=("times New roman",16))
+        delete=Button(self.root3,text="Delete",command=self.delete_data1,cursor="hand2",bg="dark khaki",fg="dark blue",font=("times New roman",16,"bold"))
         delete.place(x=40,y=600,width=130)
-        update=Button(self.root3,text="update",command=self.update_data1,cursor="hand2",bg="#FF8C00",font=("times New roman",16))
+        update=Button(self.root3,text="update",command=self.update_data1,cursor="hand2",bg="dark khaki",fg="dark blue",font=("times New roman",16,"bold"))
         update.place(x=210,y=600,width=130)
-        search=Button(self.root3,text="Search",command=self.search_data1,cursor="hand2",bg="#FF8C00",font=("times New roman",16))
+        search=Button(self.root3,text="Search",command=self.search_data1,cursor="hand2",bg="dark khaki",fg="dark blue",font=("times New roman",16,"bold"))
         search.place(x=380,y=600,width=130)
         r=Frame(self.root3,bd=7,relief=GROOVE,bg="dark khaki")
         r.place(x=600,y=600,width=600,height=70)
