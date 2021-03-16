@@ -1020,6 +1020,11 @@ class Login1:
                 statement=f"update rst2 set QuantityLeft=QuantityLeft-{self.Stock_Table.item(each)['values'][2]} where ID={self.Stock_Table.item(each)['values'][0]}"
                 cur.execute(statement)
                 con.commit()
+                customer_id=random.randint(1,1000)
+                cur.execute(f"insert into customer values ({customer_id},'{self.c_name.get()}',{self.c_phon.get()})")
+                
+                con.commit()  
+
                 total=total+int(self.Stock_Table.item(each)['values'][3])
                 self.txtarea.insert(END,f"\n{i}\t{self.Stock_Table.item(each)['values'][1]}\t\t     {self.Stock_Table.item(each)['values'][2]}\t {self.Stock_Table.item(each)['values'][3]}")
                 self.Stock_Table.detach(each)
@@ -1036,7 +1041,7 @@ class Login1:
 
         #==============Save the bill to database================
 
-            statement=f"insert into sales_bill values ({self.bill_no.get()},'{datetime.today().strftime('%Y-%m-%d')}',{total+0.1*total},{customer_id}) "
+            statement=f"insert into sales_bill values ({self.bill_no.get()},'{datetime.today().strftime('%Y-%m-%d')}',{total+0.10*total-0.10*total},{customer_id}) "
             cur.execute(statement)
             con.commit()
             con.close()
