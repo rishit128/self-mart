@@ -854,9 +854,9 @@ class Login1:
         g3_txt=Label(F3,textvariable=self.item_price,font=("times new roman",16,"bold"),bg=bg_color,fg="lightgreen").grid(row=2,column=1,padx=10,pady=10,stick="w")
 
         item_qty_lbl=Label(F3,text="Item Quantity.",font=("times new roman",16,"bold"),bg=bg_color,fg="lightgreen").grid(row=3,column=0,padx=0,pady=10,sticky="w")
-        item_qty_txt=Entry(F3,width=10,textvariable=self.item_quantity,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN).grid(row=3,column=1,padx=10,pady=10)
+        item_qty_txt=Entry(F3,width=10,textvariable=self.item_quantity,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN).grid(row=3,column=1,padx=10,pady=10,sticky="w")
 
-        search_name_btn=Button(F3,bg="gold",text="Add",command=self.add_item,fg="Black",width=7,bd=5,font="arial 18 bold").grid(row=4,column=1,padx=5,pady=5)
+        search_name_btn=Button(F3,bg="gold",text="Add",command=self.add_item,fg="Black",width=7,bd=5,font="arial 18 bold").grid(row=4,column=1,padx=5,pady=5,sticky="w")
 
 
         #============Shopping Cart===============#
@@ -1155,7 +1155,7 @@ class Login1:
         self.txtarea.insert(END,f"\nS.No  \tItem Name\t\t   Qty \tPrice")
         self.txtarea.insert(END,f"\n=======================================")
 
-        cur.execute(f"select * from sales_stocks where inv_id={inv_id}")
+        cur.execute(f"select * from sales_stocks where inv_id1={inv_id}")
         rows=cur.fetchall()
         i=1
         total=0
