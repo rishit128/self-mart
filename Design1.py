@@ -827,7 +827,7 @@ class Login1:
             a.append(li[i][0])
        
         
-        e = Entry(F2,width=10,textvariable=self.search_item_no,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN)
+        e = Entry(F2,width=15,textvariable=self.search_item_no,font=("times new roman",16,"bold"),bd=5,relief=SUNKEN)
         e.place(x=100,y=40) 
         e.bind('<KeyRelease>', self.checkkey) 
         
@@ -837,6 +837,7 @@ class Login1:
         self.lb = Listbox(F2,bd=10,relief=GROOVE,bg=bg_color,fg="gold") 
         self.lb.place(x=95,y=100) 
         self.update(self.l)
+        self.lb.bind("<<ListboxSelect>>",self.callback)
         #============Item Details===============#
 
         F3=LabelFrame(self.root6,bd=10,relief=GROOVE, text="Item Details",font=("times new roman",18,"bold"),fg="gold",bg=bg_color)
@@ -913,6 +914,17 @@ class Login1:
 
         #===============New functions==============
 
+    def callback(self,event):
+        selection = event.widget.curselection()
+        if selection:
+            index = selection[0]
+            data = event.widget.get(index)
+            self.search_item_no.set(data)
+        else:
+            messagebox.showerror("error","All Fields Are Required",parent=self.root6)
+            
+            
+            
     def checkkey(self,event): 
        
         value = event.widget.get() 
