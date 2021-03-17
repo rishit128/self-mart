@@ -77,6 +77,9 @@ class Login1:
         modify_btn.place(x=450,y=290,width=380,height=40)
         Search_btn=Button(self.root,text="Expiry Check",command=self.search_window,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
         Search_btn.place(x=450,y=350,width=380,height=40)
+
+        Email_btn=Button(self.root,text="Email",command=self.Email,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
+        Email_btn.place(x=450,y=410,width=380,height=40)
         
 
 
@@ -86,6 +89,8 @@ class Login1:
         Billing_btn.place(x=880,y=290,width=380,height=40)
         Revenue_btn=Button(self.root,text="Check Today's Revenue",command=self.show_rev,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
         Revenue_btn.place(x=880,y=350,width=380,height=40)
+
+
         Logout_btn=Button(self.root,text="Log Out",command=self.logout_window,cursor="hand2",bg="slate gray",fg="black",bd=5,font=("times new roman",18,"bold"))
         Logout_btn.place(x=1100,y=820,width=280,height=40)
 
@@ -1346,7 +1351,11 @@ class Login1:
             
             con.commit()
         con.close()
-         
+    def Email(self):
+        self.root.destroy()
+        import bulkemails
+        
+        
    
 
         
