@@ -15,8 +15,8 @@ class BULK_EMAIL:
         self.root.config(bg="white")
 
         ##########Icons#########
-        self.email_icon=ImageTk.PhotoImage(file="Downloads/email1.png")
-        self.setting_icon=ImageTk.PhotoImage(file="Downloads/setting2.png")
+        self.email_icon=ImageTk.PhotoImage(file="email1.png")
+        self.setting_icon=ImageTk.PhotoImage(file="setting2.png")
 
        #--------title----------#
         title=Label(self.root,text="Bulk Email Sender",image=self.email_icon,padx=10,compound=LEFT,font=("Goudy old style",48,"bold"),bg="#222A35",fg="white",anchor="w").place(x=0,y=0,relwidth=1)
