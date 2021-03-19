@@ -1187,7 +1187,7 @@ class Login1:
         self.root7=Toplevel()
         self.root7.title("SELF MART MANAGEMENT SYSTEM")
         self.root7.geometry("1440x900+100+50")
-        self.fg12=ImageTk.PhotoImage(file="Design.png")
+        self.fg12=ImageTk.PhotoImage(file="pexels-cowomen-2041627.jpg")
         self.bg_image1=Label(self.root7,image=self.fg12)
         self.bg_image1.place(x=0,y=0,relwidth=1,relheight=1)
         
@@ -1232,7 +1232,7 @@ class Login1:
         self.root7=Toplevel()
         self.root7.title("SELF MART MANAGEMENT SYSTEM")
         self.root7.geometry("1440x900+100+50")
-        self.fg15=ImageTk.PhotoImage(file="Design.png")
+        self.fg15=ImageTk.PhotoImage(file="pexels-cowomen-2041627.jpg")
         self.bg_image1=Label(self.root7,image=self.fg15)
         self.bg_image1.place(x=0,y=0,relwidth=1,relheight=1)
         total=0.0
@@ -1296,11 +1296,11 @@ class Login1:
     def Valuations(self):     
         self.root8=Toplevel() 
         self.root8.geometry("1440x900+100+50")
-        self.fg15=ImageTk.PhotoImage(file="Design.png")
+        self.fg15=ImageTk.PhotoImage(file="pexels-cowomen-2041627.jpg")
         self.bg_image1=Label(self.root8,image=self.fg15)
         self.bg_image1.place(x=0,y=0,relwidth=1,relheight=1)
         Table_Frame=Frame(self.root8,bd=4,relief=GROOVE,bg="#EC7B51")
-        Table_Frame.place(x=40,y=40,width=850,height=370)
+        Table_Frame.place(x=140,y=40,width=850,height=370)
         style = ttk.Style()
         style.theme_use("clam")
         style.configure("Treeview",
@@ -1338,6 +1338,28 @@ class Login1:
         self.login1_table.pack(fill=BOTH,expand=1)
         self.login1_table.bind("<ButtonRelease-1>")
         self.fetch5_data()
+
+
+        search=Button(self.root8,text="Search",command=self.search_data5,cursor="hand2",bg="dark orange",font=("times New roman",16))
+        search.place(x=730,y=600,width=130)
+
+        r=Frame(self.root8,bd=7,relief=GROOVE,bg="slate gray")
+        r.place(x=100,y=580,width=600,height=70)
+        lblsearch=Label(self.root8,text="Search By",font=("Impat",16,"bold"),fg="dark blue",bg="slate gray")
+        lblsearch.place(x=130,y=600)
+
+       
+
+        
+        self.cmb_search=ttk.Combobox(self.root8,font=("Times new roman",16),state='readonly',justify=CENTER)
+        self.cmb_search['values']=("Select","inv_id","date","customer_name")
+        self.cmb_search.place(x=250,y=600,width=130,height=30)
+        self.cmb_search.current(0)
+
+        self.txt_search_var=StringVar()
+        self.txt_search=Entry(self.root8,textvariable=self.txt_search_var,font=("Times new roman",15),bg="white",bd=5,relief=GROOVE)
+        self.txt_search.place(x=401,y=600,width=250,height=30)
+
         
     def fetch5_data(self):
         con=pymysql.connect(host="localhost",user="root",password="",database="rishit")
@@ -1354,6 +1376,19 @@ class Login1:
     def Email(self):
         self.root.destroy()
         import bulkemails
+
+
+    def search_data5(self):
+        con=pymysql.connect(host="localhost",user="root",password="",database="rishit")
+        cur=con.cursor()
+        cur.execute("select inv_id, date, amount, customer_id, customer_name, customer_phone from sales_bill inner join customer on customer_id = customer_id1 where "+str(self.cmb_search.get())+" LIKE '%"+str(self.txt_search.get())+"%'")
+        rows=cur.fetchall()
+        if len(rows)!=0:
+            self.login1_table.delete(*self.login1_table.get_children())
+            for row in rows:
+                self.login1_table.insert('',END,values=row)
+            con.commit()
+        con.close()
         
         
    
